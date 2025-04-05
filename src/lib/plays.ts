@@ -2,6 +2,7 @@ import { baseballState } from './state.svelte';
 import { singleRun, walk, sacFly, singlePlus, doubleRun, tripleRun } from './baseRunning';
 import scoring from './scoring';
 import outRules from './outRules';
+import doubleplay from './doubleplay';
 
 export default function plays(dice1: number, dice2: number) {
 	let play = '';
@@ -36,7 +37,7 @@ export default function plays(dice1: number, dice2: number) {
 	if (dice1 === 2) {
 		if (dice2 === 2) {
 			play = 'Double Play';
-			outRules(2);
+			doubleplay(baseballState.baseRunners);
 		}
 		if (dice2 === 3) {
 			play = 'Ground Out';
