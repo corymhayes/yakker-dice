@@ -1,8 +1,8 @@
 import { baseballState } from './state.svelte';
 import { singleRun, walk, sacFly, singlePlus, doubleRun, tripleRun } from './baseRunning';
-import scoring from './scoring';
 import outRules from './outRules';
 import doubleplay from './doubleplay';
+import homerun from './homerun';
 
 export default function plays(dice1: number, dice2: number) {
 	let play = '';
@@ -10,7 +10,7 @@ export default function plays(dice1: number, dice2: number) {
 	if (dice1 === 1) {
 		if (dice2 === 1) {
 			play = 'Home Run';
-			scoring(1);
+			homerun();
 		}
 		if (dice2 === 2) {
 			play = 'Double';

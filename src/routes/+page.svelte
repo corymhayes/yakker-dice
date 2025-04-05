@@ -8,10 +8,10 @@
 	let play: string = $state('');
 
 	function rollDice() {
-		dice1 = Math.floor(Math.random() * (6 - 1) + 1);
-		dice2 = Math.floor(Math.random() * (6 - 1) + 1);
-		// dice1 = 2;
-		// dice2 = 2;
+		// dice1 = Math.floor(Math.random() * (6 - 1) + 1);
+		// dice2 = Math.floor(Math.random() * (6 - 1) + 1);
+		dice1 = 1;
+		dice2 = 1;
 
 		let dice_roll = [dice1, dice2];
 		dice_roll.sort();
